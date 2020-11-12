@@ -24,7 +24,10 @@
 <body>
     <canvas id="renderCanvas"></canvas>
     <script src="babylon4.js"></script>
-    <script type="module" src="main.js"></script>
+    <script type="module">
+        import { createEnv } from "./main"
+        createEnv(<?php if(isset($_GET["n"])) { echo($_GET["n"]); } else { echo(10); } ?>);
+    </script>
 </body>
 
 </html>
